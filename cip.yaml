@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: cipsvc-sree
+ namespace: sreejeshm
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+  ports:
+  - port: 80  #service port inside cluster
+    targetPort: 80 #container port

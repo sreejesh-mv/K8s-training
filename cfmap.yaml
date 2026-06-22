@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: cm1
+    namespace: sreejeshm
+data:
+  root-pass: "root@2026"
+  MYSQL_USER: "allianz"
+  MYSQL_PASSWORD: "allianz123"
+  sql-db: "newdb"

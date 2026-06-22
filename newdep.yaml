@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: new-dep-sree
+  namespace: sreejeshm
+  annotations:
+   kubernetes.io/change-cause: "image tag updating to caddy"
+spec:
+  strategy:
+    type: Recreate
+  replicas: 3
+  selector:
+    matchLabels:
+      app: caddy
+  template:
+    metadata:
+      labels:
+        app: caddy
+    spec:
+     containers:
+     - name: c1
+       image: caddy

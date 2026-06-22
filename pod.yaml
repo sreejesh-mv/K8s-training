@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: yamal-pod
+  namespace: sreejeshm
+spec:
+  containers:
+  - name: ctr1
+    image: caddy
+  - name: ctr2
+    image: redis
